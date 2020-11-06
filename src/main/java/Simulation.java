@@ -9,6 +9,7 @@ public class Simulation {
 
         Dice die1 = new Dice (6);
         Dice die2 = new Dice(6);
+        int counter = 0;
 
        System.out.println("The current value of the first die is: " + die1.getFaceValue());
         System.out.println("The value of the second die is: "+ die2.getFaceValue()+"\n");
@@ -22,6 +23,26 @@ public class Simulation {
             die2.rollDice();
             System.out.println("The value after rolling your 1st die is: " + die1.getFaceValue());
             System.out.println("The value after rolling your 2nd die is: " + die2.getFaceValue());
+
+            System.out.println("Would you like to play the snake eye game? Type \"Yes\" or \"No\"");
+
+            die1.rollDice();
+            die2.rollDice();
+
+            String userResponse2 = S.nextLine();
+            if (userResponse2.equalsIgnoreCase("yes")){
+                while (!(die1.getFaceValue()==1 && die2.getFaceValue()==1)){
+                    counter++;
+                    die1.rollDice();
+                    die2.rollDice();
+
+                }
+                System.out.printf("\nIt took %d attempts to get snake eyes.\n", counter);
+                System.out.println("You rolled well :D Good Day, Dicey Out!");
+            }
+
+
+
         } else{
             System.out.println("Exiting the application...beeeep!!");
         }
@@ -29,14 +50,14 @@ public class Simulation {
 
 
 
-        die1.rollDice();
 
 
 
 
+}
     }
 
-    }
+
 
 
 

@@ -2,10 +2,8 @@ import java.util.Random;
 
 public class Dice {
 
-    private int numOfSides;
+    private int numOfSides = 6;
     private int faceValue;
-
-
 
 
 
@@ -16,17 +14,18 @@ public class Dice {
         faceValue = randomNumGenerator.nextInt(numOfSides) + 1;
     }
 
-    //this method is going to roll the dice
 
-    public void rollDice(){
+
+    public void rollDice(){             //this method is going to roll the dice
 
         Random randomNumGenerator = new Random();
         faceValue = randomNumGenerator.nextInt(numOfSides) + 1;
 
-    //roll dice method ended
+                                        //roll dice method ended
     }
 
-    public int getFaceValue(){
+    public int getFaceValue(){   //You need a getFaceValue function because faceValue's access level
+                                 // is set as private, so to get the value, you need a get method.
 
         return faceValue;
     }
