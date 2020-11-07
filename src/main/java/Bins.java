@@ -1,15 +1,19 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Bins {
 
     int snakeEyeCounter = 0;
 
-    public void storeValues(){
-        ArrayList<Integer> faceValuesForDie1 = new ArrayList<Integer>();
-       // faceValuesForDie1.add()
+    public void storeValues(int faceValue ){
+        ArrayList<Integer> savedValues = new ArrayList<Integer>();
+
+           savedValues.add(faceValue);
 
 
-        ArrayList<Integer> faceValuesForDie2 = new ArrayList<Integer>();
+
+       // System.out.println(savedValues);
+
 
 
     }

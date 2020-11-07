@@ -5,11 +5,23 @@ public class Simulation {
 
     public static void startTheGame(){
 
-        System.out.println("Welcome to the good ol' Dicey game! Let's get rollin'\n");
-
         Dice die1 = new Dice (6);
         Dice die2 = new Dice(6);
-        int counter = 0;
+
+        System.out.println("Welcome to the good ol' Dicey game! Let's get rollin'\n");
+
+        Scanner Sc = new Scanner(System.in);
+        System.out.println("Warm up Champ!! How many times would you like to toss the dice?");
+        int tossInput = Sc.nextInt();
+        die1.tosses(tossInput);
+        die2.tosses(tossInput);
+
+//        System.out.println("The current value of the first die is: " + die1.getFaceValue());
+//        System.out.println("The value of the second die is: "+ die2.getFaceValue()+"\n");
+        System.out.println("---");
+
+
+        int counter = 1;
 
        System.out.println("The current value of the first die is: " + die1.getFaceValue());
         System.out.println("The value of the second die is: "+ die2.getFaceValue()+"\n");
